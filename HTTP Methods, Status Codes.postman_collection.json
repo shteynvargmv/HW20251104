@@ -1,0 +1,630 @@
+{
+	"info": {
+		"_postman_id": "fd175c3f-27a7-4886-8779-2e74246c7167",
+		"name": "HTTP Methods, Status Codes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49540025",
+		"_collection_link": "https://parfen-marina-9786152.postman.co/workspace/Marina's-Workspace~d1a7fa7c-57cb-4d09-8448-3d8995282019/collection/49540025-fd175c3f-27a7-4886-8779-2e74246c7167?action=share&source=collection_link&creator=49540025"
+	},
+	"item": [
+		{
+			"name": "Add 201,409",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Aeeeqrewewewqneea\",\r\n    \"lastName\":\"Sh\",\r\n    \"subject\":\"SMM3\",\r\n    \"experience\":3,\r\n    \"salary\" : 100000,\r\n    \"email\" : \"ab@mail.ru\",\r\n    \"isActive\" : true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teacher/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add 400",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Anna2\",\r\n    \"lastName\":\"Birykova2\",\r\n    \"subject\":\"\",\r\n    \"experience\": 56,\r\n    \"salary\" : 300000,\r\n    \"email\" : \"@mail.ru\",\r\n    \"isActive\" : false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teacher/add",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teacher/all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Id 200",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teacher/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Id 404",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teacher/-1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"-1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search 400",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teacher/search?firstName=An2na&lastName=sH",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"search"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "An2na"
+						},
+						{
+							"key": "lastName",
+							"value": "sH"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search 200,204",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teacher/search?firstName=Anna&lastName=sh",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"search"
+					],
+					"query": [
+						{
+							"key": "firstName",
+							"value": "Anna"
+						},
+						{
+							"key": "lastName",
+							"value": "sh"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subject 400",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teacher/subject/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"subject",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Subject 200, 204",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teacher/subject/SMM",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"subject",
+						"SMM"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter 200,204",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teacher/filter?minExp=1&maxExp=50&minSalary=10&maxSalary=1000000",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "minExp",
+							"value": "1"
+						},
+						{
+							"key": "maxExp",
+							"value": "50"
+						},
+						{
+							"key": "minSalary",
+							"value": "10"
+						},
+						{
+							"key": "maxSalary",
+							"value": "1000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter 400",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teacher/filter?minExp=50&maxExp=1&minSalary=1000000&maxSalary=10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "minExp",
+							"value": "50"
+						},
+						{
+							"key": "maxExp",
+							"value": "1"
+						},
+						{
+							"key": "minSalary",
+							"value": "1000000"
+						},
+						{
+							"key": "maxSalary",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Active",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teacher/active",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teacher/count",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CountBySubject",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teacher/count-by-subject",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"count-by-subject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-bulk",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n    \"firstName\":\"Ann\",\r\n    \"lastName\":\"Birykova\",\r\n    \"subject\": \"SMM\",\r\n    \"experience\":3,\r\n    \"salary\" : 100000,\r\n    \"email\" : \"ab@mail.ru\",\r\n    \"isActive\" : true\r\n},\r\n{\r\n    \"firstName\":\"Anna\",\r\n    \"lastName\":\"Sht\",\r\n    \"subject\":\"SMM3\",\r\n    \"experience\":3,\r\n    \"salary\" : 100000,\r\n    \"email\" : \"ab@mail.ru\",\r\n    \"isActive\" : true\r\n}]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teacher/add-bulk",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"add-bulk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateById 400",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Anna2\",\r\n    \"lastName\":\"Sht2\",\r\n    \"subject\":\"SMMt\",\r\n    \"experience\":52,\r\n    \"salary\" : 500000,\r\n    \"email\" : \"ab.com\",\r\n    \"isActive\" : true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teacher/update/-5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"update",
+						"-5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateById",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Ann\",\r\n    \"lastName\":\"Sht\",\r\n    \"subject\":\"SMM\",\r\n    \"experience\":19,\r\n    \"salary\" : 100000,\r\n    \"email\" : \"ab@mail.com\",\r\n    \"isActive\" : true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teacher/update/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"update",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdatePartial",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"An\",\r\n    \"lastName\":null,\r\n    \"subject\":\"SMM2\",\r\n    \"experience\": 19,\r\n    \"salary\" : null,\r\n    \"email\" : \"fg@mail.com\",\r\n    \"isActive\" : true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teacher/update-partial/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"update-partial",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Activate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teacher/activate/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"activate",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deactivate",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/teacher/deactivate/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"deactivate",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/teacher/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"teacher",
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
